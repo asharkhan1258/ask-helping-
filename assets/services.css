@@ -1,0 +1,1025 @@
+/* =========================================================
+   ASK HELPING HANDS
+   HELP TOPICS / SERVICES PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   VARIABLES
+   ========================================================= */
+
+:root {
+    --primary: #168a5b;
+    --primary-dark: #0d6844;
+    --primary-light: #eaf7f1;
+
+    --ink: #17251f;
+    --muted: #68776f;
+
+    --white: #ffffff;
+    --surface: #f5f8f6;
+
+    --border: #dce7e1;
+
+    --housing: #a95743;
+    --housing-bg: #faf0ed;
+
+    --utility: #9a6b12;
+    --utility-bg: #fbf6e8;
+
+    --food: #18865a;
+    --food-bg: #edf8f2;
+
+    --healthcare: #36749b;
+    --healthcare-bg: #edf6fa;
+
+    --financial: #7a5b92;
+    --financial-bg: #f5f0f8;
+
+    --education: #4c68a0;
+    --education-bg: #eff3fa;
+
+    --radius: 20px;
+
+    --container: 1100px;
+
+    --shadow-sm:
+        0 4px 15px rgba(20, 60, 45, 0.06);
+
+    --shadow-md:
+        0 15px 35px rgba(20, 60, 45, 0.10);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "DM Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--ink);
+    background: var(--white);
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.page-hero {
+    background: var(--white);
+    text-align: center;
+}
+
+.help-hero {
+    padding-top: 80px;
+    padding-bottom: 32px;
+}
+
+.help-hero .container {
+    max-width: 860px;
+}
+
+
+/* =========================================================
+   BREADCRUMBS
+   ========================================================= */
+
+.breadcrumbs {
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    background: var(--primary-light);
+    color: var(--primary-dark);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.page-hero h1 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(44px, 7vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+
+    margin-bottom: 23px;
+}
+
+.page-hero h1 em {
+    color: var(--primary);
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   MUTED
+   ========================================================= */
+
+.muted {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+    padding: 90px 0;
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   SECTION HEAD
+   ========================================================= */
+
+.section-head {
+    margin-bottom: 50px;
+}
+
+.section-head.center {
+    text-align: center;
+}
+
+.section-head h2 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: clamp(40px, 6vw, 52px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.035em;
+
+    margin-bottom: 20px;
+}
+
+.section-head h2 em {
+    color: var(--primary);
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+.section-head p {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+   ========================================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   SERVICE CARD - BASE
+   ========================================================= */
+
+.service-card {
+    display: block;
+
+    padding: 28px;
+
+    border: 1px solid transparent;
+
+    border-radius: var(--radius);
+
+    min-height: 330px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================================
+   SERVICE TOP
+   ========================================================= */
+
+.service-top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   SERVICE ICON
+   ========================================================= */
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: var(--white);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow-sm);
+
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   SERVICE BADGE
+   ========================================================= */
+
+.service-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background: var(--white);
+
+    border-radius: 6px;
+
+    font-size: 10.5px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+   ========================================================= */
+
+.service-card h3 {
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 26px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+
+    margin-bottom: 12px;
+
+    transition: color 0.2s ease;
+}
+
+
+/* =========================================================
+   SERVICE DESCRIPTION
+   ========================================================= */
+
+.service-card p {
+    color: var(--ink);
+
+    font-size: 14.5px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   SERVICE LINK
+   ========================================================= */
+
+.service-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13.5px;
+
+    font-weight: 700;
+}
+
+.service-link i {
+    font-size: 12px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.service-card:hover .service-link i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   01 - HOUSING
+   ========================================================= */
+
+.service-housing {
+    background: var(--housing-bg);
+
+    border-color: rgba(169, 87, 67, 0.15);
+
+    color: var(--housing);
+}
+
+.service-housing:hover {
+    border-color: var(--housing);
+}
+
+.service-housing .service-icon {
+    color: var(--housing);
+}
+
+.service-housing .service-badge {
+    color: #704033;
+
+    border: 1px solid rgba(169, 87, 67, 0.20);
+}
+
+.service-housing h3 {
+    color: var(--ink);
+}
+
+.service-housing:hover h3,
+.service-housing .service-link {
+    color: #704033;
+}
+
+
+/* =========================================================
+   02 - UTILITY
+   ========================================================= */
+
+.service-utility {
+    background: var(--utility-bg);
+
+    border-color: rgba(154, 107, 18, 0.15);
+
+    color: var(--utility);
+}
+
+.service-utility:hover {
+    border-color: var(--utility);
+}
+
+.service-utility .service-icon {
+    color: var(--utility);
+}
+
+.service-utility .service-badge {
+    color: #70500d;
+
+    border: 1px solid rgba(154, 107, 18, 0.20);
+}
+
+.service-utility:hover h3,
+.service-utility .service-link {
+    color: #70500d;
+}
+
+
+/* =========================================================
+   03 - FOOD
+   ========================================================= */
+
+.service-food {
+    background: var(--food-bg);
+
+    border-color: rgba(24, 134, 90, 0.15);
+
+    color: var(--food);
+}
+
+.service-food:hover {
+    border-color: var(--food);
+}
+
+.service-food .service-icon {
+    color: var(--food);
+}
+
+.service-food .service-badge {
+    color: #126745;
+
+    border: 1px solid rgba(24, 134, 90, 0.20);
+}
+
+.service-food:hover h3,
+.service-food .service-link {
+    color: #126745;
+}
+
+
+/* =========================================================
+   04 - HEALTHCARE
+   ========================================================= */
+
+.service-healthcare {
+    background: var(--healthcare-bg);
+
+    border-color: rgba(54, 116, 155, 0.15);
+
+    color: var(--healthcare);
+}
+
+.service-healthcare:hover {
+    border-color: var(--healthcare);
+}
+
+.service-healthcare .service-icon {
+    color: var(--healthcare);
+}
+
+.service-healthcare .service-badge {
+    color: #2b5d7d;
+
+    border: 1px solid rgba(54, 116, 155, 0.20);
+}
+
+.service-healthcare:hover h3,
+.service-healthcare .service-link {
+    color: #2b5d7d;
+}
+
+
+/* =========================================================
+   05 - FINANCIAL
+   ========================================================= */
+
+.service-financial {
+    background: var(--financial-bg);
+
+    border-color: rgba(122, 91, 146, 0.15);
+
+    color: var(--financial);
+}
+
+.service-financial:hover {
+    border-color: var(--financial);
+}
+
+.service-financial .service-icon {
+    color: var(--financial);
+}
+
+.service-financial .service-badge {
+    color: #624978;
+
+    border: 1px solid rgba(122, 91, 146, 0.20);
+}
+
+.service-financial:hover h3,
+.service-financial .service-link {
+    color: #624978;
+}
+
+
+/* =========================================================
+   06 - EDUCATION
+   ========================================================= */
+
+.service-education {
+    background: var(--education-bg);
+
+    border-color: rgba(76, 104, 160, 0.15);
+
+    color: var(--education);
+}
+
+.service-education:hover {
+    border-color: var(--education);
+}
+
+.service-education .service-icon {
+    color: var(--education);
+}
+
+.service-education .service-badge {
+    color: #3d5582;
+
+    border: 1px solid rgba(76, 104, 160, 0.20);
+}
+
+.service-education:hover h3,
+.service-education .service-link {
+    color: #3d5582;
+}
+/* ================================
+   FOOD BANK DIRECTORY
+================================ */
+
+.food-bank-section {
+  background: #fff;
+  padding: 90px 0 110px;
+}
+
+/* Hero */
+
+.page-hero {
+  background: #fff;
+  padding: 80px 0 55px;
+  text-align: center;
+}
+
+.page-hero .container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  color: #667085;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #e9f8ef;
+  color: #197a45;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.page-hero h1 {
+  margin: 0 0 22px;
+  color: #17201b;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.page-hero h1 em {
+  color: #16a05d;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.page-hero .muted {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #667085;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* Section Heading */
+
+.section-head {
+  max-width: 760px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: #eef7f1;
+  color: #176b3e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  margin: 0;
+  color: #17201b;
+  font-size: clamp(38px, 5vw, 52px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.section-head h2 em {
+  color: #159957;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.section-head p {
+  max-width: 620px;
+  margin: 20px auto 0;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+
+/* States Grid */
+
+.states {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 8px;
+
+  border: 1px solid #e1e6e3;
+  border-radius: 9px;
+
+  background: #f8faf9;
+  color: #17201b;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    color .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.state:hover {
+  background: #eef8f2;
+  border-color: #159957;
+  color: #176b3e;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(21, 153, 87, .10);
+}
+
+
+/* Directory Footer */
+
+.food-bank-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.food-bank-footer p {
+  margin: 0 0 7px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.directory-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #159957;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+
+  transition: color .2s ease;
+}
+
+.directory-link:hover {
+  color: #116b3c;
+}
+
+.directory-link span {
+  transition: transform .2s ease;
+}
+
+.directory-link:hover span {
+  transform: translateX(4px);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+  .states {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .page-hero {
+    padding: 60px 20px 45px;
+  }
+
+  .page-hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .page-hero .muted {
+    font-size: 16px;
+  }
+
+  .food-bank-section {
+    padding: 65px 20px 80px;
+  }
+
+  .section-head {
+    margin-bottom: 40px;
+  }
+
+  .section-head h2 {
+    letter-spacing: -1px;
+  }
+
+  .section-head p {
+    font-size: 16px;
+  }
+
+  .states {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .state {
+    min-height: 44px;
+    font-size: 11px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .states {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .state {
+    min-height: 45px;
+    font-size: 12px;
+  }
+
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .help-hero {
+        padding-top: 65px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(
+            calc(100% - 28px),
+            var(--container)
+        );
+    }
+
+    .help-hero {
+        padding-top: 45px;
+        padding-bottom: 20px;
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        padding: 6px 11px;
+        margin-bottom: 15px;
+    }
+
+    .page-hero h1 {
+        font-size: 42px;
+    }
+
+    .muted {
+        font-size: 15.5px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-head {
+        margin-bottom: 35px;
+    }
+
+    .section-head h2 {
+        font-size: 37px;
+    }
+
+    .section-head p {
+        font-size: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .service-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+    .service-card h3 {
+        font-size: 24px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .page-hero h1 {
+        font-size: 37px;
+    }
+
+    .section-head h2 {
+        font-size: 33px;
+    }
+
+    .service-top {
+        margin-bottom: 20px;
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .service-badge {
+        font-size: 9px;
+    }
+
+}

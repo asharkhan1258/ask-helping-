@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Ask Helping Hands — Find the help that fits</title>
+  <meta name="description" content="Free information and referral service for housing, utilities, food, healthcare, financial help, education and career resources.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  
+  
+</head>
+<body>
+    <!-- Navbar -->
+<header class="site-header">
+  <div class="container nav-container">
+
+    <!-- Logo -->
+    <a href="/" class="brand">
+      <span class="brand-icon">
+        <i class="fa-solid fa-hand-holding-heart"></i>
+      </span>
+      <span class="brand-text">
+        Ask <em>Helping Hands</em>
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <a href="how-it-works.html">How It Works</a>
+      <a href="services.html">Help Topics</a>
+      <a href="hotlines.html" class="help-now">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        Help Now
+      </a>
+      <a href="food-banks.html">Food Banks</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+
+    <!-- Call Button -->
+    <a href="tel:+18449106769" class="nav-call">
+      <span class="call-icon">
+        <i class="fa-solid fa-phone"></i>
+      </span>
+
+      <span class="call-text">
+        <small>CALL FREE</small>
+        <strong>(844) 910-6769</strong>
+      </span>
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="how-it-works.html">
+      <i class="fa-solid fa-route"></i>
+      How It Works
+    </a>
+
+    <a href="services.html">
+      <i class="fa-solid fa-hand-holding-heart"></i>
+      Help Topics
+    </a>
+
+    <a href="hotlines.html" class="mobile-help-now">
+      <i class="fa-solid fa-circle-exclamation"></i>
+      Help Now
+    </a>
+
+    <a href="food-banks.html">
+      <i class="fa-solid fa-location-dot"></i>
+      Food Banks
+    </a>
+
+    <a href="resources.html">
+      <i class="fa-solid fa-book-open"></i>
+      Resources
+    </a>
+
+    <a href="tel:+18449106769" class="mobile-call">
+      <i class="fa-solid fa-phone"></i>
+      Call Free — (844) 910-6769
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="eyebrow mb-4">Free referral service · Mon–Fri 9am–6pm CT</span>
+          <h1 class="mb-4">Find the help <em>that fits.</em></h1>
+          <p class="hero-copy mb-4">Call us. Tell a team member your situation. We'll point you to the federal programs, state agencies, local food banks, and verified hotlines that may help — so you can apply directly. The call is free. We do not pay bills or submit applications for you.</p>
+          <div class="d-flex flex-wrap gap-2 mb-2">
+            <a class="btn btn-main" href="tel:+18449106769">Call — free (844) 910-6769</a>
+            <a class="btn btn-outline-main" href="contact.html">Submit a form →</a>
+          </div>
+          <div class="small text-secondary mb-4">Mon–Fri 9am–6pm CT · Sat &amp; Sun closed</div>
+          <div>
+            <span class="pill">Free to call</span>
+            <span class="pill">Real person answers</span>
+            <span class="pill">Verified referrals</span>
+            <span class="pill">We never sell your info</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=900&h=950&fit=crop&crop=center&auto=format&q=85" alt="Person on a phone call at a desk">
+            <div class="float-card float-top"><strong>Real person answers</strong><br><small class="text-secondary">Mon–Fri business hours</small></div>
+            <div class="float-card float-bottom"><strong>We point, you apply</strong><br><small class="text-secondary">Directly with the program</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK FOOD BANK SELECTOR -->
+  <section class="section-alt py-5 border-top border-bottom">
+    <div class="container">
+      <div class="card-clean">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-6">
+            <h2 class="h4 mb-1">Just need a food bank near you?</h2>
+            <p class="mb-0">Pick your state to see a verified directory — no call needed.</p>
+          </div>
+          <div class="col-lg-6 d-flex gap-2">
+            <select id="stateSelect" class="form-select">
+              <option value="">Choose your state…</option>
+            </select>
+            <button id="stateGo" class="btn btn-main" type="button" disabled>Go →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Rental help •</span><span>SNAP &amp; food banks •</span><span>LIHEAP utility •</span><span>ACA marketplace •</span><span>Medicaid •</span><span>FAFSA &amp; Pell •</span><span>WIC •</span><span>Section 8 •</span><span>CHIP for kids •</span><span>Free legal aid •</span><span>Job training •</span><span>Debt counseling •</span>
+      <span>Rental help •</span><span>SNAP &amp; food banks •</span><span>LIHEAP utility •</span><span>ACA marketplace •</span><span>Medicaid •</span><span>FAFSA &amp; Pell •</span><span>WIC •</span><span>Section 8 •</span><span>CHIP for kids •</span><span>Free legal aid •</span><span>Job training •</span><span>Debt counseling •</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow mb-3">How It Works</span>
+        <h2>One call. Real referrals. <em>No runaround.</em></h2>
+        <p>We're a free information and referral service. Tell us your situation and we'll point you to the federal programs, local food banks, and hotlines that may help — so you can apply directly.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4"><div class="card-clean"><div class="display-font fs-1 text-success opacity-50 mb-2"><i class="fa-solid fa-phone"></i> 01</div><h3>Call us — or submit a form</h3><p><i class="fa-solid fa-phone me-2"></i>Call (844) 910-6769 during business hours and a real team member picks up. If we're closed, fill out our short form and we'll follow up the next business day.</p><span class="pill">Free to call</span></div></div>
+        <div class="col-lg-4"><div class="card-clean"><div class="display-font fs-1 text-success opacity-50 mb-2"><i class="fa-solid fa-comments"></i> 02</div><h3>Tell us your situation</h3><p>A team member listens, asks a few basic questions about what's urgent and where you live, and figures out which programs and hotlines fit your needs.</p><span class="pill">Real conversation</span></div></div>
+        <div class="col-lg-4"><div class="card-clean"><div class="display-font fs-1 text-success opacity-50 mb-2"><i class="fa-solid fa-location-arrow"></i> 03</div><h3>We tell you where to go or call</h3><p>You get the federal programs, state agencies, local food banks, and verified hotlines that match your situation — plus the questions to ask. You apply directly with each program. We never submit forms for you.</p><span class="pill">You apply directly</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HELP TOPICS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow mb-3">Help Topics</span>
+        <h2>Six topics. <em>One phone call.</em></h2>
+        <p>Whatever the situation, a team member knows which federal programs, state agencies, and local nonprofits fit. We point. We don't pay bills.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><div class="topic-card"><div class="topic-icon">⌂</div><h3>Rent &amp; Housing</h3><p>We refer to federal rental programs (Section 8, Public Housing), state emergency rental funds, and HUD-approved housing counselors.</p><a href="services.html">Find rental help options →</a></div></div>
+        <div class="col-md-6 col-lg-4"><div class="topic-card"><div class="topic-icon">⚡</div><h3>Utilities &amp; Internet</h3><p>We refer to LIHEAP (federal energy assistance), Lifeline (free phone/internet), and Weatherization programs.</p><a href="services.html">See utility programs →</a></div></div>
+        <div class="col-md-6 col-lg-4"><div class="topic-card"><div class="topic-icon">♡</div><h3>Food &amp; Groceries</h3><p>We refer to SNAP/EBT, WIC, local food banks (51-state directory), school meal programs, and Meals on Wheels.</p><a href="food-banks.html">Find food resources →</a></div></div>
+        <div class="col-md-6 col-lg-4"><div class="topic-card"><div class="topic-icon">+</div><h3>Healthcare &amp; Insurance</h3><p>We refer to ACA Marketplace, Medicaid, Medicare, CHIP for kids, and prescription assistance programs.</p><a href="services.html">See healthcare programs →</a></div></div>
+        <div class="col-md-6 col-lg-4"><div class="topic-card"><div class="topic-icon">$</div><h3>Financial Help</h3><p>We refer to nonprofit credit counseling, unemployment offices, IRS hardship programs, and free legal aid networks.</p><a href="services.html">See financial resources →</a></div></div>
+        <div class="col-md-6 col-lg-4"><div class="topic-card"><div class="topic-icon">▣</div><h3>Education &amp; Career</h3><p>We refer to FAFSA, Pell Grants, FSEOG, state workforce boards, and free job training (WIOA) programs.</p><a href="services.html">Explore education aid →</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATES -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow mb-3">All 50 States + DC</span>
+        <h2>We've mapped <em>food banks</em> in every state.</h2>
+        <p>Click any state to see a verified directory of Feeding America-network food banks with real addresses and phone numbers.</p>
+      </div>
+      <div class="states">
+  <a class="state" href="food-banks.html#alabama">Alabama</a>
+  <a class="state" href="food-banks.html#alaska">Alaska</a>
+  <a class="state" href="food-banks.html#arizona">Arizona</a>
+  <a class="state" href="food-banks.html#arkansas">Arkansas</a>
+  <a class="state" href="food-banks.html#california">California</a>
+  <a class="state" href="food-banks.html#colorado">Colorado</a>
+  <a class="state" href="food-banks.html#connecticut">Connecticut</a>
+  <a class="state" href="food-banks.html#delaware">Delaware</a>
+  <a class="state" href="food-banks.html#florida">Florida</a>
+  <a class="state" href="food-banks.html#georgia">Georgia</a>
+
+  <a class="state" href="food-banks.html#hawaii">Hawaii</a>
+  <a class="state" href="food-banks.html#idaho">Idaho</a>
+  <a class="state" href="food-banks.html#illinois">Illinois</a>
+  <a class="state" href="food-banks.html#indiana">Indiana</a>
+  <a class="state" href="food-banks.html#iowa">Iowa</a>
+  <a class="state" href="food-banks.html#kansas">Kansas</a>
+  <a class="state" href="food-banks.html#kentucky">Kentucky</a>
+  <a class="state" href="food-banks.html#louisiana">Louisiana</a>
+  <a class="state" href="food-banks.html#maine">Maine</a>
+  <a class="state" href="food-banks.html#maryland">Maryland</a>
+
+  <a class="state" href="food-banks.html#massachusetts">Massachusetts</a>
+  <a class="state" href="food-banks.html#michigan">Michigan</a>
+  <a class="state" href="food-banks.html#minnesota">Minnesota</a>
+  <a class="state" href="food-banks.html#mississippi">Mississippi</a>
+  <a class="state" href="food-banks.html#missouri">Missouri</a>
+  <a class="state" href="food-banks.html#montana">Montana</a>
+  <a class="state" href="food-banks.html#nebraska">Nebraska</a>
+  <a class="state" href="food-banks.html#nevada">Nevada</a>
+  <a class="state" href="food-banks.html#new-hampshire">New Hampshire</a>
+  <a class="state" href="food-banks.html#new-jersey">New Jersey</a>
+
+  <a class="state" href="food-banks.html#new-mexico">New Mexico</a>
+  <a class="state" href="food-banks.html#new-york">New York</a>
+  <a class="state" href="food-banks.html#north-carolina">North Carolina</a>
+  <a class="state" href="food-banks.html#north-dakota">North Dakota</a>
+  <a class="state" href="food-banks.html#ohio">Ohio</a>
+  <a class="state" href="food-banks.html#oklahoma">Oklahoma</a>
+  <a class="state" href="food-banks.html#oregon">Oregon</a>
+  <a class="state" href="food-banks.html#pennsylvania">Pennsylvania</a>
+  <a class="state" href="food-banks.html#rhode-island">Rhode Island</a>
+  <a class="state" href="food-banks.html#south-carolina">South Carolina</a>
+
+  <a class="state" href="food-banks.html#south-dakota">South Dakota</a>
+  <a class="state" href="food-banks.html#tennessee">Tennessee</a>
+  <a class="state" href="food-banks.html#texas">Texas</a>
+  <a class="state" href="food-banks.html#utah">Utah</a>
+  <a class="state" href="food-banks.html#vermont">Vermont</a>
+  <a class="state" href="food-banks.html#virginia">Virginia</a>
+  <a class="state" href="food-banks.html#washington">Washington</a>
+  <a class="state" href="food-banks.html#west-virginia">West Virginia</a>
+  <a class="state" href="food-banks.html#wisconsin">Wisconsin</a>
+  <a class="state" href="food-banks.html#wyoming">Wyoming</a>
+
+  <a class="state" href="#d.c.">D.C.</a>
+</div>
+      <div id="states" class="state-grid"></div>
+      <p class="text-center mt-4"><a class="fw-bold text-success" href="food-banks.html">See all food banks →</a></p>
+    </div>
+  </section>
+
+  <!-- HOTLINES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title text-start mx-0">
+        <span class="eyebrow mb-3">Real Phone Numbers, Real Help</span>
+        <h2>Need help <em>tonight?</em></h2>
+        <p>These free, verified federal and 501(c)(3) hotlines connect you with food, housing, energy, and crisis support — answered by real humans, not bots.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">crisis</span><small>24/7</small></div><h3>988 Suicide &amp; Crisis Lifeline</h3><p>Free, confidential support for anyone in mental health crisis or emotional distress. Call, text, or chat 988.</p><a class="phone-btn" href="tel:988">988</a></div></div>
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">general</span><small>24/7 in most areas</small></div><h3>211 — Local Help, Any Need</h3><p>United Way nationwide help line. Connects you with local food, housing, utility, healthcare, employment, and crisis services in your community.</p><a class="phone-btn" href="tel:211">2-1-1</a></div></div>
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">food</span><small>Mon–Fri, 8am–8pm ET</small></div><h3>USDA National Hunger Hotline</h3><p>Free help finding food banks, SNAP/EBT info, soup kitchens, and meal sites near you. English and Spanish operators.</p><a class="phone-btn" href="tel:18663486479">1-866-348-6479</a></div></div>
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">utility</span><small>Mon–Fri, 9am–7pm ET</small></div><h3>LIHEAP / NEAR Energy Assistance</h3><p>National Energy Assistance Referral hotline — connects you to your state LIHEAP office for help with heating, cooling, and weatherization bills.</p><a class="phone-btn" href="tel:18666746327">1-866-674-6327</a></div></div>
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">housing</span><small>Business hours, Mon–Fri</small></div><h3>HUD Housing Counseling</h3><p>Find a HUD-approved housing counselor for help with renting, buying a home, foreclosure, or reverse mortgages — free or low-cost in your area.</p><a class="phone-btn" href="tel:18005694287">1-800-569-4287</a></div></div>
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">healthcare</span><small>24/7</small></div><h3>Healthcare.gov Marketplace</h3><p>Help enrolling in ACA health insurance, finding subsidies, and navigating the federal marketplace. TTY: 1-855-889-4325.</p><a class="phone-btn" href="tel:18003182596">1-800-318-2596</a></div></div>
+        <div class="col-md-6"><div class="hotline"><div class="d-flex justify-content-between mb-3"><span class="tag">education</span><small>Mon–Fri business hours</small></div><h3>American Job Center / CareerOneStop</h3><p>Free help finding jobs, training programs, career resources, and unemployment benefits info from the U.S. Department of Labor. Call 1-877-US2-JOBS.</p><a class="phone-btn" href="tel:18778725627">1-877-872-5627</a></div></div>
+      </div>
+      <p class="small-note mt-4">Note: These are official government and 501(c)(3) hotlines we share as a public service. Ask Helping Hands is not affiliated with these organizations.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt faq">
+    <div class="container" style="max-width:820px">
+      <div class="section-title">
+        <span class="eyebrow mb-3">Common Questions</span>
+        <h2>Things people ask <em>first.</em></h2>
+      </div>
+      <div class="accordion" id="faq">
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">Is this free? What's the catch?</button></h2><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Yes, calling (844) 910-6769 is completely free. There is no fee to talk to us, no fee to request a callback, and no upsells on the call. We're a privately held company, funded by its members — but we don't charge callers. We make our money elsewhere, not from you.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">Do you pay my rent or utility bills?</button></h2><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">No. We are an information and referral service. We point you toward programs, agencies and resources that may help; you apply directly with the program.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">What exactly is the service then?</button></h2><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">A team member listens to your situation and helps identify relevant federal programs, state agencies, local food banks and verified hotlines. We explain where to go or who to call next.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4">When can I reach you?</button></h2><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Our listed business hours are Mon–Fri, 9am–6pm CT. Saturday and Sunday are closed.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f5">What is a "team member"?</button></h2><div id="f5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">It means a real person who listens to your situation, asks basic questions and helps identify resources that fit.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f6">Are you a nonprofit?</button></h2><div id="f6" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">The supplied site content describes Ask Helping Hands as a privately held company, not a nonprofit.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f7">Are you the government?</button></h2><div id="f7" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">No. The service refers callers to government programs and other organizations; it does not claim to be a government agency.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f8">Will you submit forms for me?</button></h2><div id="f8" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">No. You apply directly with each program. We do not submit applications for you.</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f9">Will you sell my information?</button></h2><div id="f9" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">The supplied site content states: “We never sell your info.”</div></div></div>
+        <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f10">Why call you instead of just calling 211?</button></h2><div id="f10" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">The service can help you identify several types of resources and explain where to go or call. 211 is also listed as a nationwide local-help option.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <span class="eyebrow mb-3">Ready When You Are</span>
+        <h2 class="display-5 mt-2">Pick up the phone. <em>We'll pick up too.</em></h2>
+        <p class="mt-3 mb-4">A real team member on the line. We point you to the federal programs, local food banks, and hotlines that may fit your situation — free. You apply directly with each program.</p>
+        <a class="btn btn-main" href="tel:+18449106769">Call now — free (844) 910-6769</a>
+        <div class="mt-3 small">Mon–Fri 9am–6pm CT · Sat &amp; Sun closed</div>
+        <div class="mt-3"><a class="text-white fw-bold" href="contact.html">Can't call right now? Submit a form →</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><h4>Ask Helping Hands</h4><p>A free information and referral service. We point people to programs, agencies, food banks and verified hotlines that may fit their situation.</p><a href="tel:18449106769">(844) 910-6769</a><a href="mailto:hello@example.com">hello@example.com</a></div>
+<div><h4>Get Help</h4><a href="services.html">What We Help With</a><a href="food-banks.html">Food Bank Directory</a><a href="hotlines.html">Verified Hotlines</a><a href="contact.html">Submit a Form</a></div>
+<div><h4>Resources</h4><a href="resources.html">Resource Hub</a><a href="faq.html">FAQ</a><a href="resources.html#glossary">Glossary</a><a href="resources.html#prepare">What to Prepare</a></div>
+<div><h4>Company</h4><a href="how-it-works.html">How It Works</a><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="disclosures.html">Disclosures</a></div>
+</div><div class="fine">© <span class="year"></span> Ask Helping Hands. This demo site is independently recreated with Bootstrap-style responsive CSS. It is not affiliated with the original website.</div></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+const statesBox=document.getElementById("states");
+const select=document.getElementById("stateSelect");
+const go=document.getElementById("stateGo");
+states.forEach(([name,slug])=>{
+  const a=document.createElement("a"); a.className="state"; a.href=`food-banks/${slug}/`; a.textContent=name; statesBox.appendChild(a);
+  const o=document.createElement("option"); o.value=slug; o.textContent=name; select.appendChild(o);
+});
+select.addEventListener("change",()=>go.disabled=!select.value);
+go.addEventListener("click",()=>{if(select.value) location.href=`food-banks/${select.value}/`;});
+</script>
+
+</body>
+</html>
